@@ -15,9 +15,9 @@ function awpp_search_plugins() {
 
 
 <div class="wrap"> <!-- START WRAP DIV -->
-
-	<h2>Search Plugins with Addendio</h2>
-
+		
+	<h2>Search Plugins with Addendio</h2>	
+	
 					<div class="row"></div>
 					<div role="tabpanel">
 						<br>
@@ -26,7 +26,7 @@ function awpp_search_plugins() {
 						<li role="presentation" class="active"><a href="#search-tab" aria-controls="search" role="tab" data-toggle="tab">Search Plugins</a></li>
 						<li role="presentation" ><a href="#newsletter-tab" aria-controls="newsletter" role="tab" data-toggle="tab">Newsletter</a></li>
 						<li role="presentation" ><a href="#faq-tab" aria-controls="faq" role="tab" data-toggle="tab">FAQ</a></li>
-						<li role="presentation"><a href="<?php echo AWPPT_ADMIN_FOLDER;?>themes.php?page=addendio-search-themes" aria-controls="themes" role="tab" >Search Themes</a></li>
+						<li role="presentation"><a href="<? echo AWPPT_ADMIN_FOLDER;?>themes.php?page=addendio-search-themes" aria-controls="themes" role="tab" >Search Themes</a></li>						  
 					</ul>
 
 					<!-- Tab panes -->
@@ -45,7 +45,7 @@ function awpp_search_plugins() {
 
 							<!-- Logo -->
 							<div class="col-md-2 col-xs-11" >
-							  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=plugins&utm_campaign=searchpage_logo" target="_blank" ><img id="logo" style="max-height:45px; max-width: 196px;" src="<?php echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
+							  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=plugins&utm_campaign=searchpage_logo" target="_blank" ><img id="logo" style="max-height:45px; max-width: 196px;" src="<? echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
 							</div>
 
 							<!-- Search bar -->
@@ -79,7 +79,7 @@ function awpp_search_plugins() {
 
 							  <br>
 								<button class="btn btn-primary" type="button" id="reset-query" autofocus>
-								  Reset Search
+								  Reset Search 
 								</button>
 
 						  </div>
@@ -184,12 +184,12 @@ function awpp_search_plugins() {
 
 					  <!-- Hit template -->
 					  <script type="text/template" id="hit-template">
-
+						
 						{{#source_wp_flag}}
 									<div class="hit media" >
 												{{#thumb_flag}}
 													<img class="media-object pull-left" src="{{ img_thumb }}" style="width:128px;height:128px;" alt="{{ name }}" title="{{ name }}">
-												{{/thumb_flag}}
+												{{/thumb_flag}}						
 									  <div class="media-body result-style" >
 												<h4 class="hit_name text-left pull-left">{{{ _highlightResult.name.value }}} <small> by {{{author}}}</small></h4>
 												<div class="btn-group pull-right btn-group-sm" >
@@ -198,12 +198,12 @@ function awpp_search_plugins() {
 															  </button>
 															  <ul class="dropdown-menu" role="menu">
 																{{#homepage_flag}}
-																	<li><a href="{{homepage}}" target="_blank" rel="nofollow" >Plugin's Homepage <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
+																	<li><a href="{{homepage}}" target="_blank" rel="nofollow" >Plugin's Homepage <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>				
 																{{/homepage_flag}}
 																{{#author_href_flag}}
-																	<li><a href="{{author_href}}" target="_blank" rel="nofollow" >View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
+																	<li><a href="{{author_href}}" target="_blank" rel="nofollow" >View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>				
 																{{/author_href_flag}}
-																<li><a class="thickbox" href="<?php echo AWPPT_ADMIN_FOLDER;?>plugin-install.php?tab=plugin-information&plugin={{ slug }}&TB_iframe=true&width={{page_width}}&height={{page_height}}">
+																<li><a class="thickbox" href="<? echo AWPPT_ADMIN_FOLDER;?>plugin-install.php?tab=plugin-information&plugin={{ slug }}&TB_iframe=true&width={{page_width}}&height={{page_height}}">
 																	{{#plugin_installed_flag}}
 																		Info
 																	{{/plugin_installed_flag}}
@@ -213,11 +213,11 @@ function awpp_search_plugins() {
 																	</a></li>
 																<li><a href="https://wordpress.org/plugins/{{slug}}/" target="_blank" rel="nofollow" >View on WP.org <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
 																{{#donate_link_flag}}
-																	<li><a  href="{{donate_link}}" target="_blank" rel="nofollow"  >Donate <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
+																	<li><a  href="{{donate_link}}" target="_blank" rel="nofollow"  >Donate <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>				
 																{{/donate_link_flag}}
 																</ul>
 												</div>
-
+												
 												{{#plugin_installed_flag}}
 													<div class="clearfix"></div>
 													<p class=" pull-left" ><span class="label label-success pull-left" data-toggle="tooltip" data-placement="top" title="{{{name}}} already installed" >already installed</span><br/></p>
@@ -228,29 +228,29 @@ function awpp_search_plugins() {
 										 <p class="text-left pull-left">
 										 {{{ _highlightResult.short_description.value }}}</p>
 										{{#tags_flag}}
-										<div class="clearfix"></div>
+										<div class="clearfix"></div>										
 										<p class="text-left pull-left" >
 											<span class="glyphicon glyphicon-tags" style="color:#f5874f;"></span> {{#_highlightResult.tags}}{{{ _highlightResult.tags.value }}}{{/_highlightResult.tags}}
 										</p>
 										{{/tags_flag}}
 										<div class="clearfix"></div>
-										<p class="text-left pull-left">
+										<p class="text-left pull-left">	
 										<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Installs">Installs {{installs}}+</span>
 											<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Version {{ version }}">Version {{ version }}</span>
 											<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Requires WordPress to be > {{ requires }} ">WP>{{ requires }}</span>
-											<span class="label label-{{last_update_label_color}}" data-toggle="tooltip" data-placement="top" title="Last update">Last update {{last_update_range}}</span>
+											<span class="label label-{{last_update_label_color}}" data-toggle="tooltip" data-placement="top" title="Last update">Last update {{last_update_range}}</span> 
 											<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Created">Created {{added_range}}</span>
 										</p>
 										<div class="clearfix"></div>
-										<p >
+										<p >	
 										{{{star_rating}}}
 											<span class="label label-{{rating_label_color}}" data-toggle="tooltip" data-placement="top" title="Average rating">Rating {{rating}}</span>
 											<span class="label label-{{num_ratings_label_color}}" data-toggle="tooltip" data-placement="top" title="Total number of votes">#Votes {{num_ratings}}</span>
 									  	</p>
 										</div> <!-- END media body div -->
 									</div> <!-- END hit media div -->
-							{{/source_wp_flag}}
-
+							{{/source_wp_flag}}	
+						
 					  </script>
 
 					  <!-- Pagination template -->
@@ -279,13 +279,13 @@ function awpp_search_plugins() {
 
 						<h3>Newsletter</h3>
 							If you are interested in receiving in your mailbox a recap of the latest plugins and other cool stuff you can subscribe to our newsletter (<em>NB the form below will open up a new tab</em>).
-							<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.
+							<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.	
 							<br/><br/>
-						<?php echo awppt_subscribe_newsletter();?>
+						<? echo awppt_subscribe_newsletter();?>
 					</div>
-					<!-- END FAQ TAB -->
-
-
+					<!-- END FAQ TAB -->						
+						
+						
 					<!-- START FAQ TAB -->
 					<?php require_once  dirname(__FILE__) . '/awppt-static-text.php';?>
 					<!-- END FAQ TAB -->
@@ -297,6 +297,6 @@ function awpp_search_plugins() {
 
 </div>	<!-- END WRAP DIV -->
 
-<?php
-
+<?		
+	
 }

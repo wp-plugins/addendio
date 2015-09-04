@@ -11,14 +11,20 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+		
+		// Make sure that wp_get_current_user function is available
+		if(!function_exists('wp_get_current_user()')) {
+    	include(ABSPATH . 'wp-includes/pluggable.php'); 
+		}
+
 		// Plugin Folder Path
 		if ( ! defined( 'AWPPT_PLUGIN_DIR' ) ) {
 			define( 'AWPPT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 		}
-
-		if ( is_admin() ) {
+		
+		if ( is_admin() && current_user_can( 'administrator' ) ) {			
 			require_once AWPPT_PLUGIN_DIR . 'includes/awppt-functions.php';
-		}
+		} 
 
 		// Plugin Folder URL
 		if ( ! defined( 'AWPPT_PLUGIN_URL' ) ) {

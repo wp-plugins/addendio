@@ -13,8 +13,8 @@ function awpp_search_themes() {
 
 ?>
 <div class="wrap"> <!-- START WRAP DIV -->
-	<h2><?php _e( 'Search Themes with Addendio', 'search-themes-with-addendio' ); ?></h2>
-
+	<h2><?php _e( 'Search Themes with Addendio', 'search-themes-with-addendio' ); ?></h2>	
+	
 		<div class="row"></div>
 		<div role="tabpanel">
 			<br>
@@ -23,7 +23,7 @@ function awpp_search_themes() {
 			<li role="presentation" class="active"><a href="#search-tab" aria-controls="search" role="tab" data-toggle="tab">Search Themes</a></li>
 			<li role="presentation" ><a href="#newsletter-tab" aria-controls="newsletter" role="tab" data-toggle="tab">Newsletter</a></li>
 			<li role="presentation" ><a href="#faq-tab" aria-controls="faq" role="tab" data-toggle="tab">FAQ</a></li>
-			<li role="presentation"><a href="<?php echo AWPPT_ADMIN_FOLDER;?>plugins.php?page=addendio-search-plugins" aria-controls="plugins" role="tab" >Search Plugins</a></li>
+			<li role="presentation"><a href="<? echo AWPPT_ADMIN_FOLDER;?>plugins.php?page=addendio-search-plugins" aria-controls="plugins" role="tab" >Search Plugins</a></li>
 			</ul>
 
 		<!-- Tab panes -->
@@ -42,7 +42,7 @@ function awpp_search_themes() {
 
 				<!-- Logo -->
 				<div class="col-md-2 col-xs-11">
-				  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=themes&utm_campaign=searchpage_logo" target="_blank" ><img id="logo"  style="max-height:45px; max-width: 196px;" src="<?php echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
+				  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=themes&utm_campaign=searchpage_logo" target="_blank" ><img id="logo"  style="max-height:45px; max-width: 196px;" src="<? echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
 				</div>
 
 				<!-- Search bar -->
@@ -75,7 +75,7 @@ function awpp_search_themes() {
 				<div id="facets" class="hidden-sm hidden-xs"></div>
 
 					<br><button class="btn btn-primary" type="button" id="reset-query">
-					  Reset Search
+					  Reset Search 
 					</button>
 
 			  </div>
@@ -95,7 +95,7 @@ function awpp_search_themes() {
 					  <ul class="dropdown-menu" role="menu">
 						<li><a href="#" class="sortBy" data-index-suffix="">Relevance</a></li>
 						<li><a href="#" class="sortBy" data-index-suffix="_rating_desc"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Rating</a></li>
-						<li><a href="#" class="sortBy" data-index-suffix="_downloaded_desc"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Downloads</a></li>
+						<li><a href="#" class="sortBy" data-index-suffix="_downloaded_desc"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Downloads</a></li>				  
 						</ul>
 					</div>
 				  </div>
@@ -181,55 +181,58 @@ function awpp_search_themes() {
 
 		  <!-- Hit template -->
 		  <script type="text/template" id="hit-template">
-			<div class="hit media">
-			  <div class="media-body">
-				<h4 class="hit_name">
-					<a class="thickbox" href="http://wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}">{{{ _highlightResult.name.value }}}</a>
-				<small> by {{{author}}}</small></h4>
-				<div class="btn-group pull-right btn-group-sm">
-					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						More info<span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-						<li><a href="{{ author_href }}" target="_blank">View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
-						<li><a class="thickbox" href="http://wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}">Preview</a></li>
-						<li><a href="<?php echo AWPPT_ADMIN_FOLDER;?>theme-install.php?theme={{slug}}">Install</a></li>
-					  </ul>
-					</div>
+		  	{{#source_wp_flag}}
 
-				<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Total downloads">Downloads {{downloaded}} +</span>
-				<span class="label label-{{last_update_label_color}}" data-toggle="tooltip" data-placement="top" title="Last update">Last update {{last_update_range}}</span>
-				{{#version}}
-				<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Version {{version}}">Version {{version}}</span><br>
-				{{/version}}
+				<div class="hit media">
+				  <div class="media-body">
+					<h4 class="hit_name">
+						<a class="thickbox" href="//wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}">{{{ _highlightResult.name.value }}}</a>
+					<small> by {{{author}}}</small></h4>
+					<div class="btn-group pull-right btn-group-sm">
+						  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							More info<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu">
+							<li><a href="{{ author_href }}" target="_blank">View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
+							<li><a class="thickbox" href="//wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}">Preview</a></li>
+							<li><a href="<? echo AWPPT_ADMIN_FOLDER;?>theme-install.php?theme={{slug}}">Install</a></li>
+						  </ul>
+						</div>
 
-				{{{star_rating}}}
-					<span class="label label-{{rating_label_color}}" data-toggle="tooltip" data-placement="top" title="Average rating">Rating {{rating}}</span>
-					<span class="label label-{{num_ratings_label_color}}" data-toggle="tooltip" data-placement="top" title="Total number of votes">#Votes {{num_ratings}}</span>
+					<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Total downloads">Downloads {{downloaded}} +</span> 
+					<span class="label label-{{last_update_label_color}}" data-toggle="tooltip" data-placement="top" title="Last update">Last update {{last_update_range}}</span>
+					{{#version}}
+					<span class="label label-info" data-toggle="tooltip" data-placement="top" title="Version {{version}}">Version {{version}}</span><br>
+					{{/version}}
 
-				<div class="center-block" style="max-width:400px;height:auto;">
-						<a class="thickbox" href="http://wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}" >
-							<img class="img-responsive img-thumbnail" src="{{ screenshot }}"  alt="Preview {{ name }}" title="Preview {{ name }}">
-						</a>
-					</div>
-				<p>
-					<span class="glyphicon glyphicon-tags" style="color:#f5874f;" title="tags"></span> {{#_highlightResult.tags}}{{{ _highlightResult.tags.value }}}{{/_highlightResult.tags}}
-				</p>
+					{{{star_rating}}}
+						<span class="label label-{{rating_label_color}}" data-toggle="tooltip" data-placement="top" title="Average rating">Rating {{rating}}</span>
+						<span class="label label-{{num_ratings_label_color}}" data-toggle="tooltip" data-placement="top" title="Total number of votes">#Votes {{num_ratings}}</span>
 
-					{{#description_flag}}
-						<div class="clearfix"></div>
-							<button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#{{slug}}-desc" aria-expanded="false" aria-controls="{{slug}}-desc">
-							Theme description
-							</button>
-							<div class="collapse" id="{{slug}}-desc">
-							  <div class="well">
-							{{{ _highlightResult.short_description.value }}}
-							  </div>
-							</div>
-					{{/description_flag}}
+					<div class="center-block" style="max-width:400px;height:auto;">
+							<a class="thickbox" href="//wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}" >
+								<img class="img-responsive img-thumbnail" src="{{ screenshot }}"  alt="Preview {{ name }}" title="Preview {{ name }}">
+							</a>
+						</div>
+					<p>
+						<span class="glyphicon glyphicon-tags" style="color:#f5874f;" title="tags"></span> {{#_highlightResult.tags}}{{{ _highlightResult.tags.value }}}{{/_highlightResult.tags}}
+					</p>
 
-			  </div> <!-- END media body div -->
-			</div> <!-- END hit media div -->
+						{{#description_flag}}
+							<div class="clearfix"></div>
+								<button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#{{slug}}-desc" aria-expanded="false" aria-controls="{{slug}}-desc">
+								Theme description 
+								</button>
+								<div class="collapse" id="{{slug}}-desc">
+								  <div class="well">
+								{{{ _highlightResult.short_description.value }}}
+								  </div>
+								</div>
+						{{/description_flag}}
+
+				  </div> <!-- END media body div -->
+				</div> <!-- END hit media div -->
+			{{/source_wp_flag}}	
 		  </script>
 
 		  <!-- Pagination template -->
@@ -254,20 +257,20 @@ function awpp_search_themes() {
 
 		<!-- START FAQ TAB -->
 		<div role="tabpanel" class="tab-pane" id="newsletter-tab">
-
+			
 			<h3>Newsletter</h3>
 			If you are interested in receiving in your mailbox a recap of the latest plugins and other cool stuff you can subscribe to our newsletter (<em>NB the form below will open up a new tab</em>).
-			<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.
+			<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.	
 			<br/><br/>
-			<?php echo awppt_subscribe_newsletter();?>
+			<? echo awppt_subscribe_newsletter();?>
 		</div>
 		<!-- END FAQ TAB -->
-
+	
 		<!-- START FAQ TAB -->
 		<?php require_once  dirname(__FILE__) . '/awppt-static-text.php';?>
 		<!-- END FAQ TAB -->
-
-
+			
+			
 
 		</div>
 		<!-- END TAB-CONTENT DIV -->
@@ -275,6 +278,6 @@ function awpp_search_themes() {
 		<!-- END TABPANEL DIV -->
 
 </div>	<!-- END WRAP DIV -->
-<?php
-
+<?	
+	
 }
