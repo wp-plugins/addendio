@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 
+//Requires functions helpers
+require_once  dirname(__FILE__) . '/awppt-functions-helpers.php';
 
 //Search Plugins Page
 require_once  dirname(__FILE__) . '/awppt-search-plugins-page.php';
