@@ -6,7 +6,7 @@ Contributors: addendio
 Tags: search, search engines, plugin, plugins, theme, themes, administration, wordpress, ajax
 Requires at least: 3.8
 Tested up to: 4.3
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Find plugins and themes like The Flash. Filter and sort based on installations, 
 > Addendio provides an alternative search for plugins and themes. Just type your keywords and Addendio will search through the title, description and tags. See the results updating in front of you immediately (make sure you don't blink). Don't like the results? You can filter based on number of installations, ratings, etc.
 > Still don't like what you see? You can simply sort the results according to your criteria.
 
-**Available filters** 
+Available filters
 1. Installs
 2. Downloads
 3. Rating
@@ -132,6 +132,9 @@ Get in touch with us, we will be happy to hear your suggestion. You can simply s
 
 == Changelog ==
 
+= 1.0.3 =
+* Fix - PHP short tags compatibility
+
 = 1.0.2 =
 * Fix - Compatibility for PHP < 5.5
 
@@ -144,6 +147,5 @@ Get in touch with us, we will be happy to hear your suggestion. You can simply s
 
 == Upgrade Notice ==
 
-= 1.0.2 =
-Fix compatibility for PHP < 5.5
-Fix some issues with theme previews plus some libraries updates.
+= 1.0.3 =
+Fix PHP short tags compatibility

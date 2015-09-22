@@ -3,7 +3,7 @@
 * Plugin Name: Addendio - Search Plugins and Themes
 * Plugin URI: https://addendio.com
 * Description: Find plugins and themes like The Flash. Filter and sort based on installations, ratings, and many other criteria.
-* Version: 1.0.2
+* Version: 1.0.3
 * Author: Addendio
 * Author URI: https://addendio.com
 * License: GPL2

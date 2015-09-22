@@ -23,7 +23,7 @@ function awpp_search_themes() {
 			<li role="presentation" class="active"><a href="#search-tab" aria-controls="search" role="tab" data-toggle="tab">Search Themes</a></li>
 			<li role="presentation" ><a href="#newsletter-tab" aria-controls="newsletter" role="tab" data-toggle="tab">Newsletter</a></li>
 			<li role="presentation" ><a href="#faq-tab" aria-controls="faq" role="tab" data-toggle="tab">FAQ</a></li>
-			<li role="presentation"><a href="<? echo AWPPT_ADMIN_FOLDER;?>plugins.php?page=addendio-search-plugins" aria-controls="plugins" role="tab" >Search Plugins</a></li>
+			<li role="presentation"><a href="<?php echo AWPPT_ADMIN_FOLDER;?>plugins.php?page=addendio-search-plugins" aria-controls="plugins" role="tab" >Search Plugins</a></li>
 			</ul>
 
 		<!-- Tab panes -->
@@ -42,7 +42,7 @@ function awpp_search_themes() {
 
 				<!-- Logo -->
 				<div class="col-md-2 col-xs-11">
-				  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=themes&utm_campaign=searchpage_logo" target="_blank" ><img id="logo"  style="max-height:45px; max-width: 196px;" src="<? echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
+				  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=themes&utm_campaign=searchpage_logo" target="_blank" ><img id="logo"  style="max-height:45px; max-width: 196px;" src="<?php echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
 				</div>
 
 				<!-- Search bar -->
@@ -195,7 +195,7 @@ function awpp_search_themes() {
 						  <ul class="dropdown-menu" role="menu">
 							<li><a href="{{ author_href }}" target="_blank">View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>
 							<li><a class="thickbox" href="//wp-themes.com/{{slug}}/?TB_iframe=true&width={{page_width}}&height={{page_height}}">Preview</a></li>
-							<li><a href="<? echo AWPPT_ADMIN_FOLDER;?>theme-install.php?theme={{slug}}">Install</a></li>
+							<li><a href="<?php echo AWPPT_ADMIN_FOLDER;?>theme-install.php?theme={{slug}}">Install</a></li>
 						  </ul>
 						</div>
 
@@ -262,7 +262,7 @@ function awpp_search_themes() {
 			If you are interested in receiving in your mailbox a recap of the latest plugins and other cool stuff you can subscribe to our newsletter (<em>NB the form below will open up a new tab</em>).
 			<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.	
 			<br/><br/>
-			<? echo awppt_subscribe_newsletter();?>
+			<?php echo awppt_subscribe_newsletter();?>
 		</div>
 		<!-- END FAQ TAB -->
 	
@@ -278,6 +278,6 @@ function awpp_search_themes() {
 		<!-- END TABPANEL DIV -->
 
 </div>	<!-- END WRAP DIV -->
-<?	
+<?php	
 	
 }

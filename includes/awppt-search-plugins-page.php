@@ -26,7 +26,7 @@ function awpp_search_plugins() {
 						<li role="presentation" class="active"><a href="#search-tab" aria-controls="search" role="tab" data-toggle="tab">Search Plugins</a></li>
 						<li role="presentation" ><a href="#newsletter-tab" aria-controls="newsletter" role="tab" data-toggle="tab">Newsletter</a></li>
 						<li role="presentation" ><a href="#faq-tab" aria-controls="faq" role="tab" data-toggle="tab">FAQ</a></li>
-						<li role="presentation"><a href="<? echo AWPPT_ADMIN_FOLDER;?>themes.php?page=addendio-search-themes" aria-controls="themes" role="tab" >Search Themes</a></li>						  
+						<li role="presentation"><a href="<?php echo AWPPT_ADMIN_FOLDER;?>themes.php?page=addendio-search-themes" aria-controls="themes" role="tab" >Search Themes</a></li>						  
 					</ul>
 
 					<!-- Tab panes -->
@@ -45,7 +45,7 @@ function awpp_search_plugins() {
 
 							<!-- Logo -->
 							<div class="col-md-2 col-xs-11" >
-							  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=plugins&utm_campaign=searchpage_logo" target="_blank" ><img id="logo" style="max-height:45px; max-width: 196px;" src="<? echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
+							  <a href="https://addendio.com/contact/?utm_source=plugin&utm_medium=plugins&utm_campaign=searchpage_logo" target="_blank" ><img id="logo" style="max-height:45px; max-width: 196px;" src="<?php echo AWPPT_PLUGIN_URL;?>assets/img/addendio_color_logo.png"/></a>
 							</div>
 
 							<!-- Search bar -->
@@ -203,7 +203,7 @@ function awpp_search_plugins() {
 																{{#author_href_flag}}
 																	<li><a href="{{author_href}}" target="_blank" rel="nofollow" >View author's page <span class="glyphicon glyphicon-new-window" style="color:#f5874f;"></span></a></li>				
 																{{/author_href_flag}}
-																<li><a class="thickbox" href="<? echo AWPPT_ADMIN_FOLDER;?>plugin-install.php?tab=plugin-information&plugin={{ slug }}&TB_iframe=true&width={{page_width}}&height={{page_height}}">
+																<li><a class="thickbox" href="<?php echo AWPPT_ADMIN_FOLDER;?>plugin-install.php?tab=plugin-information&plugin={{ slug }}&TB_iframe=true&width={{page_width}}&height={{page_height}}">
 																	{{#plugin_installed_flag}}
 																		Info
 																	{{/plugin_installed_flag}}
@@ -281,7 +281,7 @@ function awpp_search_plugins() {
 							If you are interested in receiving in your mailbox a recap of the latest plugins and other cool stuff you can subscribe to our newsletter (<em>NB the form below will open up a new tab</em>).
 							<br/> We know you have enough emails to read. Be reassured we won't bother you with boring stuff.	
 							<br/><br/>
-						<? echo awppt_subscribe_newsletter();?>
+						<?php echo awppt_subscribe_newsletter();?>
 					</div>
 					<!-- END FAQ TAB -->						
 						
@@ -297,6 +297,6 @@ function awpp_search_plugins() {
 
 </div>	<!-- END WRAP DIV -->
 
-<?		
+<?php		
 	
 }
